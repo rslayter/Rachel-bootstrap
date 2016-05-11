@@ -1,0 +1,135 @@
+/* to get this page into your html document, you must LINK IT in the head of the html document using this notation:
+<link rel="stylesheet" href="_css/sample_styles.css">
+
+this will set the relationship of the document as a style sheet so the html doc know to look to this for its styles, then it will follow the link so it knows where to look (note: you don't need an anchor tag here...) 
+
+to go up a directory use ../ for each directory you want to go up.
+
+
+/* CSS Resets go here */
+html, body, h1, h2, h3, h4, h5, h6, p, address, blockquote, input, div, span, blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+/* Document Sytles
+Shorthand notation: 
+margin - go clockwise from the top
+    only listing 2 goes top/bottom left/right
+    only listing 3 goes top left/right bottom
+    listing all 4 goes top right bottom left   
+    auto here makes it center between left and right
+
+padding - same as margins for order
+
+font - 100% Arial, Helvetica, sans-serif
+
+border - pixels style color; 
+      eg border-bottom: 10px solid gold;
+
+background - can list color, img, etc
+
+color - sets "foreground color" which generally means setting the font color
+
+colors with repeating hex codes can be shortened to 3 chars
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+
+/* This will style the links. Here we are removing the underlines first, then adding back what we want it to look like.*/
+a {
+    text-decoration: none; /* removes underline from links */
+    color: red; /* changes link text color to red */
+}
+
+/* this will change the way it looks when you hover over the link */
+a:hover {
+    color: black;
+}
+
+
+
+
+
+/* This will apply to the entire page!! */
+html{
+    
+    /*Shorthand notation for background-color: #336677 */
+    background: #367; 
+}
+
+/* This will apply to the body section, which in this case is 80% of the page */
+body{
+    width: 80%;
+    /*Shorthand nfor margin-top: 0; margin-bottom: 0; margin-left: auto; margin-right: auto; */
+    margin: 0 auto;
+    
+    background: white;
+    
+    /*fonts can be listed shorthand as font: 100% Arial, Helvetica, sans-serif; */
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+    /* shorthand for padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; */
+    padding: 10px;
+    
+}
+
+header{
+    height: 50px;
+    margin-bottom: 1em;
+    /* setting something as position absolute without setting other elements as relative will screw up your layouts */
+    position: relative;
+    /* shorthand padding for all sides */
+    padding: 20px;
+}
+
+header h1{
+    float: left;
+    font-size: 3em;
+}
+header img{
+    float: right;
+    height: 50px;
+}
+
+nav{
+    height: 25px;
+    margin-bottom: 1em;
+    font-size: .75em;
+}
+
+nav li{
+    list-style: none; /* this gets rid of bullets */
+    border: 3px solid black;
+    float: left;
+    padding: 10px 30px;
+    text-transform: capitalize;
+}
+
+aside{
+    float: left;
+    width: 30%;
+    margin-bottom: 1em;
+}
+
+article{
+    float: right;
+    width: 60%;
+}
+
+footer{
+    /* In order to get elements to jump back into document flow after elements above them have been floated, you must clear the floats. Without this, the footer would be sitting on top of the aside and artcle text. */
+    clear: both;
+    margin-top: 1em;
+}
